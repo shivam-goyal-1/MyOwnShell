@@ -1,5 +1,7 @@
+#include<bits/stdc++.h>
 #include <iostream>
 #include <string>
+using namespace std;
 
 int main() {
   // Flush after every std::cout / std:cerr
@@ -8,4 +10,9 @@ int main() {
 
   // TODO: Uncomment the code below to pass the first stage
   std::cout << "$ ";
+  string s;
+  getline(cin,s);
+
+  cout<<s<<": command not found"<<endl;
+
 }

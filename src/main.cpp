@@ -1,11 +1,44 @@
 #include <iostream>
 #include <string>
+#include <sstream>
+#include <set> 
+using namespace std;
 
 int main() {
-  // Flush after every std::cout / std:cerr
+  
   std::cout << std::unitbuf;
   std::cerr << std::unitbuf;
 
-  // TODO: Uncomment the code below to pass the first stage
-  // std::cout << "$ ";
+
+  set<string> validcommands{"exit"};
+
+
+  while(true){
+    std::cout << "$ ";
+    
+    string input;
+
+    getline(cin,input);
+
+    stringstream ss(input);
+
+    string command;
+
+    while(ss>>command){
+      if(validcommands.find(command)!=validcommands.end()){
+        if(command =="exit"){
+          return 0;
+        }
+      }else{
+            cout<<input<<": command not found"<<endl;
+
+      }
+      
+    }
+
+
+  }
+
+   
+
 }

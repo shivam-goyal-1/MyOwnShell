@@ -818,6 +818,7 @@ ServiceFabricBackup/
 *.rptproj.bak
 
 # SQL Server files
+
 *.mdf
 *.ldf
 *.ndf
@@ -1045,3 +1046,6 @@ dkms.conf
 *.dis
 
 vcpkg_installed
+.codecrafters/
+build/
+
